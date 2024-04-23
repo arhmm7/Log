@@ -30,7 +30,7 @@ std::string Log::getCurrentTime()
 #ifdef _MSC_VER
 	localtime_s(&timeinfo, &cT_t);
 #else
-	localtime_r(&currentTime_t, &timeinfo);
+	localtime_r(&cT_t, &timeinfo);
 #endif
 	std::ostringstream oss;
 	oss << std::put_time(&timeinfo, "%H:%M:%S");
